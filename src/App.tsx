@@ -5,18 +5,29 @@ import { useEffect, useState } from 'react';
 // import FilterMenu from './components/FilterMenu';
 import ItemList from './components/ItemList';
 
-import { getItemListByPage } from './api/itemList';
+import { useIntersectionObserver } from './hook/useIntersectionObserver';
+import { getItemListByPage } from './api';
 import { ItemType } from './types';
 import './App.css';
 
 function App() {
   const [itemList, setItemList] = useState<ItemType[]>([]);
+  const [pageCount, setPageCount] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
 
   async function loadItemList() {
-    const itemList = await getItemListByPage(1);
-    // console.log(itemList);
-    setItemList(itemList);
+    setIsLoading(true);
+
+    const newItemList = await getItemListByPage(pageCount);
+    console.log(newItemList[0].itemName);
+
+    setItemList((itemList) => [...itemList, ...newItemList]);
+    setPageCount((count) => count + 1);
+
+    setIsLoading(false);
   }
+
+  const setObservationTarget = useIntersectionObserver(loadItemList);
 
   useEffect(() => {
     loadItemList();
@@ -25,6 +36,8 @@ function App() {
   return (
     <>
       <ItemList itemList={itemList} />
+      {isLoading && <div>Loading...</div>}
+      {!isLoading && <div ref={setObservationTarget}></div>}
     </>
   );
 }
