@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 // import FilterMenu from './components/FilterMenu';
 import ItemList from './components/ItemList';
 
-import { getItemList } from './api/itemList';
+import { getItemListByPage } from './api/itemList';
 import { ItemType } from './types';
 import './App.css';
 
@@ -13,7 +13,7 @@ function App() {
   const [itemList, setItemList] = useState<ItemType[]>([]);
 
   async function loadItemList() {
-    const itemList = await getItemList();
+    const itemList = await getItemListByPage(1);
     // console.log(itemList);
     setItemList(itemList);
   }
