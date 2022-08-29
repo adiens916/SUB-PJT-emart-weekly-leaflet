@@ -1,12 +1,12 @@
 import unittest
 import json
-from pprint import pprint
+import random
 from pathlib import Path
+from pprint import pprint
 from bs4 import BeautifulSoup, Tag
 
-
 html_doc = f'{Path(__file__).parent}/sample.html'
-json_file = f'{Path(__file__).parent}/sample.json'
+json_file = f'{Path(__file__).parent}/sample_with_categories.json'
 
 
 class WeeklyLeaflet:
@@ -31,9 +31,10 @@ class WeeklyLeaflet:
         product_info['itemImage'] = self.get_image(product)
         product_info['priceOriginal'] = self.get_price_original(product)
         product_info['priceFinal'] = self.get_price_final(product)
-        product_info['badges'] = self.get_item_badges(product)
         product_info['favoriteCount'] = self.get_favorite_count(product)
         product_info['reviewCount'] = self.get_review_count(product)
+        product_info['badges'] = self.get_item_badges(product)
+        product_info['categories'] = self.set_categories()
 
         return product_info
 
@@ -104,6 +105,16 @@ class WeeklyLeaflet:
             return review_count
         else:
             return ''
+        
+    def set_categories(self):
+        randoms = self.get_randoms(1, 8, 3)
+        return randoms
+    
+    def get_randoms(self, min_range, max_range, max_pick):
+        random_pick = random.randint(1, max_pick)
+        randoms = random.sample(range(min_range, max_range), random_pick)
+        # pprint(randoms)
+        return randoms
 
 
 class TestWeeklyLeaflet(unittest.TestCase):
@@ -176,10 +187,10 @@ class TestWeeklyLeaflet(unittest.TestCase):
 def save_dict_as_name(result: dict, file_name: str):
     with open(file_name, 'w', encoding='utf-8') as f:
         json.dump(result, f, indent=2, ensure_ascii=False)
-    
+
 
 if __name__ == '__main__':
-    unittest.main()
+    # unittest.main()
 
     result = WeeklyLeaflet().crawl()
     print(len(result))
