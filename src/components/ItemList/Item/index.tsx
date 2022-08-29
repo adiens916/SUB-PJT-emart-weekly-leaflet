@@ -5,7 +5,7 @@ export default function Item({ item }: { item: ItemType }) {
   return (
     <article>
       {item && (
-        <Grid container>
+        <Grid container marginBottom={5}>
           <Grid item xs={5} alignContent="center">
             <img
               src={item.itemImage}
@@ -18,7 +18,7 @@ export default function Item({ item }: { item: ItemType }) {
             ></img>
           </Grid>
 
-          <Grid item xs>
+          <Grid item xs={7}>
             {/* 가격 */}
             <Stack direction="row" alignItems="center" spacing={1}>
               <del style={{ color: 'grey' }}>{item.priceOriginal}</del>
