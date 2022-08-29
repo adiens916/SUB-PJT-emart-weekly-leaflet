@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 // import Intro from './components/Intro';
 // import FilterMenu from './components/FilterMenu';
 import ItemList from './components/ItemList';
-import Item from './components/ItemList/Item';
 
 import { getItemList } from './api/itemList';
 import { ItemType } from './types';
@@ -25,7 +24,7 @@ function App() {
 
   return (
     <>
-      <Item item={itemList[2]} />
+      <ItemList itemList={itemList} />
     </>
   );
 }
