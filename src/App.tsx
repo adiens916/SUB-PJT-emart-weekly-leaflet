@@ -1,11 +1,14 @@
+import { useEffect, useState } from 'react';
+
 // import NavigationBar from './components/NavigationBar';
 // import Intro from './components/Intro';
 // import FilterMenu from './components/FilterMenu';
 import ItemList from './components/ItemList';
+import Item from './components/ItemList/Item';
+
 import { getItemList } from './api/itemList';
-import './App.css';
-import { useEffect, useState } from 'react';
 import { ItemType } from './types';
+import './App.css';
 
 function App() {
   const [itemList, setItemList] = useState<ItemType[]>([]);
@@ -22,7 +25,7 @@ function App() {
 
   return (
     <>
-      <ItemList />
+      <Item item={itemList[2]} />
     </>
   );
 }

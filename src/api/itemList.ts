@@ -17,7 +17,7 @@ export async function getItemList() {
 async function request<T>(url: string): Promise<T> {
   try {
     const response = await fetch(url);
-    console.log(response);
+    // console.log(response);
 
     if (response.ok) {
       return response.json();
