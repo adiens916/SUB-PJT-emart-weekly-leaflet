@@ -6,6 +6,7 @@ export interface ItemType {
   favoriteCount: string;
   reviewCount: string;
   badges: BadgeType[];
+  categories: number[];
 }
 
 export interface BadgeType {

@@ -9,12 +9,12 @@ export async function getItemList() {
   return itemList;
 }
 
-export async function getItemListByPage(page: number, limit = 10) {
+export async function getItemListByPage(category = 0, page = 1, limit = 10) {
   try {
-    const itemList = await request<ItemType[]>(host);
+    const itemList = await getItemListByCategory(category);
     // console.log(itemList);
 
-    const pageLength = Math.floor(itemList.length / limit);
+    const pageLength = Math.floor(itemList.length / limit) + 1;
 
     const itemListGroup: ItemType[][] = Array(pageLength);
     for (let i = 0; i < pageLength; i++) {
@@ -23,11 +23,29 @@ export async function getItemListByPage(page: number, limit = 10) {
       itemListGroup[i] = itemList.slice(start, end);
     }
 
-    return itemListGroup[page - 1];
+    const itemListDivided = itemListGroup[page - 1];
+    if (itemListDivided) {
+      return itemListDivided;
+    } else {
+      return [];
+    }
   } catch (error) {
     console.log(error);
     return [];
   }
+}
+
+export async function getItemListByCategory(categoryId: number) {
+  const itemList = await request<ItemType[]>(host);
+  if (!categoryId) {
+    return itemList;
+  }
+
+  const itemListFiltered = itemList.filter((item) =>
+    item.categories.includes(categoryId),
+  );
+
+  return itemListFiltered;
 }
 
 // export async function getItemListByFilterId(filterId = 0) {

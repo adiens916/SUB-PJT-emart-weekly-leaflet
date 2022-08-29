@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 
 // import NavigationBar from './components/NavigationBar';
 // import Intro from './components/Intro';
-// import FilterMenu from './components/FilterMenu';
+// import ItemFilter from './components/ItemFilter';
 import ItemList from './components/ItemList';
 
 import { useIntersectionObserver } from './hook/useIntersectionObserver';
@@ -18,8 +18,7 @@ function App() {
   async function loadItemList() {
     setIsLoading(true);
 
-    const newItemList = await getItemListByPage(pageCount.current);
-    // console.log(newItemList[0].itemName);
+    const newItemList = await getItemListByPage(2, pageCount.current);
 
     setItemList((itemList) => [...itemList, ...newItemList]);
     pageCount.current += 1;
