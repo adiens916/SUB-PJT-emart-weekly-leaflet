@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 // import NavigationBar from './components/NavigationBar';
 // import Intro from './components/Intro';
@@ -12,17 +12,17 @@ import './App.css';
 
 function App() {
   const [itemList, setItemList] = useState<ItemType[]>([]);
-  const [pageCount, setPageCount] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
+  const pageCount = useRef<number>(1);
 
   async function loadItemList() {
     setIsLoading(true);
 
-    const newItemList = await getItemListByPage(pageCount);
-    console.log(newItemList[0].itemName);
+    const newItemList = await getItemListByPage(pageCount.current);
+    // console.log(newItemList[0].itemName);
 
     setItemList((itemList) => [...itemList, ...newItemList]);
-    setPageCount((count) => count + 1);
+    pageCount.current += 1;
 
     setIsLoading(false);
   }
