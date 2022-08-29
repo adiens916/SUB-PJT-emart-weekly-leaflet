@@ -1,4 +1,4 @@
-import { getItemListByPage } from './itemList';
+import { getItemListByPage } from '.';
 import { ItemType } from '../types';
 
 test('get item list by page & limit', async () => {
