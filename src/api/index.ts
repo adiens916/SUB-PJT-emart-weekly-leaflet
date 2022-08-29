@@ -9,6 +9,27 @@ export async function getItemList() {
   return itemList;
 }
 
+export async function getItemListByPage(page: number, limit = 10) {
+  try {
+    const itemList = await request<ItemType[]>(host);
+    // console.log(itemList);
+
+    const pageLength = Math.floor(itemList.length / limit);
+
+    const itemListGroup: ItemType[][] = Array(pageLength);
+    for (let i = 0; i < pageLength; i++) {
+      const start = limit * i;
+      const end = limit * (i + 1);
+      itemListGroup[i] = itemList.slice(start, end);
+    }
+
+    return itemListGroup[page - 1];
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
+}
+
 // export async function getItemListByFilterId(filterId = 0) {
 //   const itemList = await request(host);
 //   return itemList;
