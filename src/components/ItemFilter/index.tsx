@@ -1,8 +1,22 @@
 import React from 'react';
-import { Tab, Tabs } from '@mui/material';
+import { IconButton, Stack } from '@mui/material';
+import { ArrowDropDown, ArrowDropUp } from '@mui/icons-material';
+
+import NoWrap from './NoWrap';
+
+const labels = [
+  '전체',
+  '인기 상품',
+  '오직 이마트에서만!',
+  '벌써 가을',
+  '바람 부는 날엔',
+  '건강하게',
+  '재미있게',
+];
 
 export default function ItemFilter(props: ItemFilterType) {
   const [value, setValue] = React.useState(0);
+  const [isOpen, setIsOpen] = React.useState(false);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -13,23 +27,21 @@ export default function ItemFilter(props: ItemFilterType) {
   };
 
   return (
-    <>
-      <Tabs
+    <Stack direction="row" alignItems="center">
+      <NoWrap
+        labels={labels}
         value={value}
-        onChange={handleChange}
-        variant="scrollable"
-        scrollButtons={false}
-        aria-label="scrollable prevent tabs example"
+        setValue={setValue}
+        handleChange={handleChange}
+      />
+      <IconButton
+        onClick={() => {
+          setIsOpen((isOpen) => !isOpen);
+        }}
       >
-        <Tab label="전체" />
-        <Tab label="인기 상품" />
-        <Tab label="오직 이마트에서만!" />
-        <Tab label="벌써 가을" />
-        <Tab label="바람 부는 날엔" />
-        <Tab label="건강하게" />
-        <Tab label="재미있게" />
-      </Tabs>
-    </>
+        {!isOpen ? <ArrowDropDown /> : <ArrowDropUp />}
+      </IconButton>
+    </Stack>
   );
 }
 
