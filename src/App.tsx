@@ -13,15 +13,17 @@ import { ItemType } from './types';
 function App() {
   const [categoryId, setCategoryId] = useState(0);
   const [itemList, setItemList] = useState<ItemType[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
   const [isFullLoaded, setIsFullLoaded] = useState(false);
   const itemListLoader = useRef(new ItemListLoader());
   const categoryIdRef = useRef<number>(0);
 
   const { setRef } = useIntersect(async (entry, observer) => {
     observer.unobserve(entry.target);
-    setIsLoading(true);
+    await loadItemList();
+    observer.observe(entry.target);
+  }, {});
 
+  const loadItemList = async () => {
     const newItemList = await itemListLoader.current.getMore();
     console.log(newItemList);
 
@@ -30,24 +32,27 @@ function App() {
     } else {
       setIsFullLoaded(true);
     }
+  };
 
-    setIsLoading(false);
-    observer.observe(entry.target);
-  }, {});
+  useEffect(() => {
+    (async () => {
+      itemListLoader.current.setCategory(categoryId);
+      setItemList(await itemListLoader.current.getMore());
+    })();
+  }, [categoryId]);
 
   return (
     <Container>
       <Header />
       <Intro />
       <ItemFilter
-        setCategoryId={(id: number) => {
-          setCategoryId(id);
-        }}
+        setCategoryId={setCategoryId}
+        categoryId={categoryId}
         categoryRef={categoryIdRef}
       />
       <ItemList itemList={itemList} />
-      {isLoading && <div>Loading...</div>}
-      {!isLoading && !isFullLoaded && (
+      {/* {isLoading && <div>Loading...</div>} */}
+      {!isFullLoaded && (
         <div ref={setRef}>
           <br />
         </div>
