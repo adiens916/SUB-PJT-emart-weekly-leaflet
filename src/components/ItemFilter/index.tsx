@@ -1,8 +1,9 @@
 import React from 'react';
-import { IconButton, Stack } from '@mui/material';
+import { Box, IconButton, Stack, Typography } from '@mui/material';
 import { ArrowDropDown, ArrowDropUp } from '@mui/icons-material';
 
 import NoWrap from './NoWrap';
+import Wrap from './Wrap';
 
 const labels = [
   '전체',
@@ -27,21 +28,36 @@ export default function ItemFilter(props: ItemFilterType) {
   };
 
   return (
-    <Stack direction="row" alignItems="center">
-      <NoWrap
-        labels={labels}
-        value={value}
-        setValue={setValue}
-        handleChange={handleChange}
-      />
-      <IconButton
-        onClick={() => {
-          setIsOpen((isOpen) => !isOpen);
-        }}
-      >
-        {!isOpen ? <ArrowDropDown /> : <ArrowDropUp />}
-      </IconButton>
-    </Stack>
+    <Box>
+      <Stack direction="row" alignItems="center" justifyContent="space-between">
+        {!isOpen ? (
+          <NoWrap
+            labels={labels}
+            value={value}
+            setValue={setValue}
+            handleChange={handleChange}
+          />
+        ) : (
+          <Typography> 전체메뉴</Typography>
+        )}
+        <IconButton
+          onClick={() => {
+            setIsOpen((isOpen) => !isOpen);
+          }}
+        >
+          {!isOpen ? <ArrowDropDown /> : <ArrowDropUp />}
+        </IconButton>
+      </Stack>
+      {isOpen && (
+        <Wrap
+          labels={labels}
+          value={value}
+          setValue={setValue}
+          handleChange={handleChange}
+          setIsOpen={setIsOpen}
+        />
+      )}
+    </Box>
   );
 }
 

@@ -17,7 +17,7 @@ export default function NoWrap(props: NoWrapType) {
   );
 }
 
-interface NoWrapType {
+export interface NoWrapType {
   labels: string[];
   value: number;
   setValue: (value: number) => void;
