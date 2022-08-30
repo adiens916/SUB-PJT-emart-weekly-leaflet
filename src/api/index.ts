@@ -2,56 +2,59 @@ import { ItemType } from '../types';
 
 const host = './resources/sample.json';
 
-export async function getItemList() {
-  const itemList = await request<ItemType[]>(host);
-  // console.log(itemList);
+export class ItemListLoader {
+  private categoryId;
+  private limit;
+  private isLoadingFinished;
+  private itemListOriginal: ItemType[] = [];
+  private itemListFiltered: ItemType[] = [];
 
-  return itemList;
-}
+  constructor() {
+    this.categoryId = 0;
+    this.limit = 10;
+    this.isLoadingFinished = false;
+  }
 
-export async function getItemListByPage(category = 0, page = 1, limit = 10) {
-  try {
-    const itemList = await getItemListByCategory(category);
-    // console.log(itemList);
+  setCategory(categoryId: number) {
+    this.categoryId = categoryId;
+    this.isLoadingFinished = false;
+    this.itemListFiltered = [];
+  }
 
-    const pageLength = Math.floor(itemList.length / limit) + 1;
-
-    const itemListGroup: ItemType[][] = Array(pageLength);
-    for (let i = 0; i < pageLength; i++) {
-      const start = limit * i;
-      const end = limit * (i + 1);
-      itemListGroup[i] = itemList.slice(start, end);
-    }
-
-    const itemListDivided = itemListGroup[page - 1];
-    if (itemListDivided) {
-      return itemListDivided;
-    } else {
+  async getMore() {
+    if (this.isLoadingFinished) {
       return [];
     }
-  } catch (error) {
-    console.log(error);
-    return [];
-  }
-}
 
-export async function getItemListByCategory(categoryId: number) {
-  const itemList = await request<ItemType[]>(host);
-  if (!categoryId) {
+    if (this.itemListFiltered.length === 0) {
+      this.itemListFiltered = await this.getFilteredList();
+    }
+
+    const itemList = this.itemListFiltered.splice(0, this.limit);
+    if (this.itemListFiltered.length === 0) {
+      this.isLoadingFinished = true;
+    }
     return itemList;
   }
 
-  const itemListFiltered = itemList.filter((item) =>
-    item.categories.includes(categoryId),
-  );
+  private async getFilteredList() {
+    await this.loadItem();
 
-  return itemListFiltered;
+    if (!this.categoryId) {
+      return this.itemListOriginal;
+    } else {
+      return this.itemListOriginal.filter((item) =>
+        item.categories.includes(this.categoryId),
+      );
+    }
+  }
+
+  private async loadItem() {
+    if (this.itemListOriginal.length === 0) {
+      this.itemListOriginal = await request<ItemType[]>(host);
+    }
+  }
 }
-
-// export async function getItemListByFilterId(filterId = 0) {
-//   const itemList = await request(host);
-//   return itemList;
-// }
 
 async function request<T>(url: string): Promise<T> {
   try {

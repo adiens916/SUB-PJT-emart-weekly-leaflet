@@ -20,7 +20,6 @@ export default function NoWrap(props: NoWrapType) {
 export interface NoWrapType {
   labels: string[];
   value: number;
-  setValue: (value: number) => void;
   handleChange: (
     event: React.SyntheticEvent<Element, Event>,
     value: number,

@@ -16,15 +16,11 @@ const labels = [
 ];
 
 export default function ItemFilter(props: ItemFilterType) {
-  const [value, setValue] = React.useState(0);
   const [isOpen, setIsOpen] = React.useState(false);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
     props.setCategoryId(newValue);
-    console.log('ref before', props.categoryRef.current);
     props.categoryRef.current = newValue;
-    console.log('ref after', props.categoryRef.current);
   };
 
   return (
@@ -33,8 +29,7 @@ export default function ItemFilter(props: ItemFilterType) {
         {!isOpen ? (
           <NoWrap
             labels={labels}
-            value={value}
-            setValue={setValue}
+            value={props.categoryId}
             handleChange={handleChange}
           />
         ) : (
@@ -51,8 +46,7 @@ export default function ItemFilter(props: ItemFilterType) {
       {isOpen && (
         <Wrap
           labels={labels}
-          value={value}
-          setValue={setValue}
+          value={props.categoryId}
           handleChange={handleChange}
           setIsOpen={setIsOpen}
         />
@@ -62,6 +56,7 @@ export default function ItemFilter(props: ItemFilterType) {
 }
 
 interface ItemFilterType {
-  setCategoryId: (id: number) => void;
+  setCategoryId: React.Dispatch<React.SetStateAction<number>>;
+  categoryId: number;
   categoryRef: React.MutableRefObject<number>;
 }

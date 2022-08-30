@@ -27,6 +27,7 @@ export default function Wrap(props: WrapType) {
             style={{ margin: 2, marginBottom: 5 }}
             variant={index === props.value ? 'filled' : 'outlined'}
             color={index === props.value ? 'primary' : 'default'}
+            key={index}
           />
         ))}
       </Paper>

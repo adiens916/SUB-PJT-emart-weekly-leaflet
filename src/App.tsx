@@ -1,63 +1,62 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { Container } from '@mui/material';
 
-// import NavigationBar from './components/NavigationBar';
-// import Intro from './components/Intro';
+import Intro from './components/Intro';
+import Header from './components/Header';
 import ItemFilter from './components/ItemFilter';
 import ItemList from './components/ItemList';
 
-import { useIntersectionObserver } from './hook/useIntersectionObserver';
-import { getItemListByPage } from './api';
+import useIntersect from './hook/useIntersectionObserver';
+import { ItemListLoader } from './api';
 import { ItemType } from './types';
-import './App.css';
-import Intro from './components/Intro';
-import Header from './components/Header';
-import { Container } from '@mui/material';
 
 function App() {
   const [categoryId, setCategoryId] = useState(0);
   const [itemList, setItemList] = useState<ItemType[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isFullLoaded, setIsFullLoaded] = useState(false);
+  const itemListLoader = useRef(new ItemListLoader());
   const categoryIdRef = useRef<number>(0);
-  const pageCount = useRef<number>(1);
 
-  const loadItemList = useCallback(async () => {
-    setIsLoading(true);
+  const { setRef } = useIntersect(async (entry, observer) => {
+    observer.unobserve(entry.target);
+    await loadItemList();
+    observer.observe(entry.target);
+  }, {});
 
-    console.log('in func', categoryIdRef);
+  const loadItemList = async () => {
+    const newItemList = await itemListLoader.current.getMore();
+    console.log(newItemList);
 
-    const newItemList = await getItemListByPage(
-      categoryIdRef.current,
-      pageCount.current,
-    );
-
-    setItemList((itemList) => [...itemList, ...newItemList]);
-    pageCount.current += 1;
-
-    setIsLoading(false);
-  }, [categoryIdRef.current]);
-
-  const setObservationTarget = useIntersectionObserver(loadItemList);
+    if (newItemList.length) {
+      setItemList((itemList) => [...itemList, ...newItemList]);
+    } else {
+      setIsFullLoaded(true);
+    }
+  };
 
   useEffect(() => {
-    console.log(categoryIdRef);
-    pageCount.current = 1;
-    setItemList([]);
-    loadItemList();
-  }, [categoryIdRef.current]);
+    (async () => {
+      itemListLoader.current.setCategory(categoryId);
+      setItemList(await itemListLoader.current.getMore());
+    })();
+  }, [categoryId]);
 
   return (
     <Container>
       <Header />
       <Intro />
       <ItemFilter
-        setCategoryId={(id: number) => {
-          setCategoryId(id);
-        }}
+        setCategoryId={setCategoryId}
+        categoryId={categoryId}
         categoryRef={categoryIdRef}
       />
       <ItemList itemList={itemList} />
-      {isLoading && <div>Loading...</div>}
-      {!isLoading && <div ref={setObservationTarget}></div>}
+      {/* {isLoading && <div>Loading...</div>} */}
+      {!isFullLoaded && (
+        <div ref={setRef}>
+          <br />
+        </div>
+      )}
     </Container>
   );
 }
