@@ -9,6 +9,9 @@ import { useIntersectionObserver } from './hook/useIntersectionObserver';
 import { getItemListByPage } from './api';
 import { ItemType } from './types';
 import './App.css';
+import Intro from './components/Intro';
+import Header from './components/Header';
+import { Container } from '@mui/material';
 
 function App() {
   const [categoryId, setCategoryId] = useState(0);
@@ -43,7 +46,9 @@ function App() {
   }, [categoryIdRef.current]);
 
   return (
-    <>
+    <Container>
+      <Header />
+      <Intro />
       <ItemFilter
         setCategoryId={(id: number) => {
           setCategoryId(id);
@@ -53,7 +58,7 @@ function App() {
       <ItemList itemList={itemList} />
       {isLoading && <div>Loading...</div>}
       {!isLoading && <div ref={setObservationTarget}></div>}
-    </>
+    </Container>
   );
 }
 
