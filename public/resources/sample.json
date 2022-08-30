@@ -1,9 +1,11 @@
 [
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8809617945344.png",
     "itemName": "HBAF 시즈닝 아몬드/믹스넛/땅콩/병아리콩",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8809617945344.png",
     "priceOriginal": "",
     "priceFinal": "",
+    "favoriteCount": "479",
+    "reviewCount": "67",
     "badges": [
       {
         "color": "blue",
@@ -14,28 +16,37 @@
         "text": "1+1"
       }
     ],
-    "favoriteCount": "479",
-    "reviewCount": "67"
+    "categories": [
+      4,
+      7,
+      2
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8809020767595.png",
     "itemName": "자연주의 유기농 참기름/볶음참깨",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8809020767595.png",
     "priceOriginal": "16,980/6,980",
     "priceFinal": "13,584/5,584원",
+    "favoriteCount": "466",
+    "reviewCount": "30",
     "badges": [
       {
         "color": "red",
         "text": "신세계포인트 적립 시 20% 할인"
       }
     ],
-    "favoriteCount": "466",
-    "reviewCount": "30"
+    "categories": [
+      2,
+      6
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2363450000000.png",
     "itemName": "광어 세꼬시회",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2363450000000.png",
     "priceOriginal": "14,980",
     "priceFinal": "11,235원",
+    "favoriteCount": "331",
+    "reviewCount": "445",
     "badges": [
       {
         "color": "blue",
@@ -46,14 +57,19 @@
         "text": "신세계포인트 적립 시 25% 할인"
       }
     ],
-    "favoriteCount": "331",
-    "reviewCount": "445"
+    "categories": [
+      5,
+      2,
+      3
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2115370000000.png",
     "itemName": "영광 참굴비",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2115370000000.png",
     "priceOriginal": "39,800/29,980",
     "priceFinal": "19,900/14,990원",
+    "favoriteCount": "108",
+    "reviewCount": "1,778",
     "badges": [
       {
         "color": "blue",
@@ -64,14 +80,19 @@
         "text": "신세계포인트 적립 시 50% 할인"
       }
     ],
-    "favoriteCount": "108",
-    "reviewCount": "1,778"
+    "categories": [
+      6,
+      7,
+      4
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/1180900000000.png",
     "itemName": "영광 참굴비",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/1180900000000.png",
     "priceOriginal": "49,800/64,800",
     "priceFinal": "24,900/32,400원",
+    "favoriteCount": "99",
+    "reviewCount": "102",
     "badges": [
       {
         "color": "blue",
@@ -82,14 +103,19 @@
         "text": "신세계포인트 적립 시 50% 할인"
       }
     ],
-    "favoriteCount": "99",
-    "reviewCount": "102"
+    "categories": [
+      5,
+      7,
+      2
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8809255233551.png",
     "itemName": "손질 제주 은갈치",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8809255233551.png",
     "priceOriginal": "39,980",
     "priceFinal": "31,984원",
+    "favoriteCount": "84",
+    "reviewCount": "",
     "badges": [
       {
         "color": "blue",
@@ -100,14 +126,17 @@
         "text": "신세계포인트 적립 시 20% 할인"
       }
     ],
-    "favoriteCount": "84",
-    "reviewCount": ""
+    "categories": [
+      4
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2500000209901.png",
     "itemName": "손질 바지락",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2500000209901.png",
     "priceOriginal": "10,980",
     "priceFinal": "7,686원",
+    "favoriteCount": "172",
+    "reviewCount": "2,068",
     "badges": [
       {
         "color": "blue",
@@ -118,14 +147,18 @@
         "text": "신세계포인트 적립 시 30% 할인"
       }
     ],
-    "favoriteCount": "172",
-    "reviewCount": "2,068"
+    "categories": [
+      3,
+      2
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/1103030000000.png",
     "itemName": "국산 생새우",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/1103030000000.png",
     "priceOriginal": "3,000",
     "priceFinal": "2,400원",
+    "favoriteCount": "178",
+    "reviewCount": "995",
     "badges": [
       {
         "color": "blue",
@@ -136,14 +169,17 @@
         "text": "신세계포인트 적립 시 20% 할인"
       }
     ],
-    "favoriteCount": "178",
-    "reviewCount": "995"
+    "categories": [
+      1
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/1159090000000.png",
     "itemName": "꽃게",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/1159090000000.png",
     "priceOriginal": "",
     "priceFinal": "",
+    "favoriteCount": "760",
+    "reviewCount": "143",
     "badges": [
       {
         "color": "blue",
@@ -154,14 +190,17 @@
         "text": "신세계포인트 적립 시 20%/행사카드 결제 시 20% 추가 할인"
       }
     ],
-    "favoriteCount": "760",
-    "reviewCount": "143"
+    "categories": [
+      7
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8809171521763.png",
     "itemName": "곱창김",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8809171521763.png",
     "priceOriginal": "12,980",
     "priceFinal": "10,384원",
+    "favoriteCount": "288",
+    "reviewCount": "148",
     "badges": [
       {
         "color": "blue",
@@ -172,14 +211,18 @@
         "text": "신세계포인트 적립 시 20% 할인"
       }
     ],
-    "favoriteCount": "288",
-    "reviewCount": "148"
+    "categories": [
+      4,
+      6
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8809094024679.png",
     "itemName": "볶음 조림 멸치",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8809094024679.png",
     "priceOriginal": "15,980",
     "priceFinal": "12,784원",
+    "favoriteCount": "179",
+    "reviewCount": "180",
     "badges": [
       {
         "color": "blue",
@@ -190,14 +233,18 @@
         "text": "신세계포인트 적립 시 20% 할인"
       }
     ],
-    "favoriteCount": "179",
-    "reviewCount": "180"
+    "categories": [
+      3,
+      7
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2115880000000.png",
     "itemName": "러시아산 손질 동태",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2115880000000.png",
     "priceOriginal": "5,980",
     "priceFinal": "4,186원",
+    "favoriteCount": "118",
+    "reviewCount": "1,004",
     "badges": [
       {
         "color": "blue",
@@ -208,14 +255,18 @@
         "text": "신세계포인트 적립 시 30% 할인"
       }
     ],
-    "favoriteCount": "118",
-    "reviewCount": "1,004"
+    "categories": [
+      3,
+      7
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8809668706161.png",
     "itemName": "바이오퍼블릭 갱년기케어/스킨케어/맨 쏘팔 옥타 멀티케어(각)",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8809668706161.png",
     "priceOriginal": "14,800",
     "priceFinal": "9,800원",
+    "favoriteCount": "24",
+    "reviewCount": "",
     "badges": [
       {
         "color": "blue",
@@ -226,28 +277,36 @@
         "text": "5천원 할인"
       }
     ],
-    "favoriteCount": "24",
-    "reviewCount": ""
+    "categories": [
+      3,
+      7,
+      2
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8809299238567.png",
     "itemName": "라이프리/메디프렌즈 시니어패드",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8809299238567.png",
     "priceOriginal": "",
     "priceFinal": "",
+    "favoriteCount": "19",
+    "reviewCount": "10",
     "badges": [
       {
         "color": "red",
         "text": "2개 이상 구매 시 50% 할인"
       }
     ],
-    "favoriteCount": "19",
-    "reviewCount": "10"
+    "categories": [
+      5
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8801166259385.png",
     "itemName": "디펜드 시니어패드",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8801166259385.png",
     "priceOriginal": "",
     "priceFinal": "",
+    "favoriteCount": "24",
+    "reviewCount": "54",
     "badges": [
       {
         "color": "blue",
@@ -258,42 +317,53 @@
         "text": "30% 할인"
       }
     ],
-    "favoriteCount": "24",
-    "reviewCount": "54"
+    "categories": [
+      7,
+      6,
+      5
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2000000429458.png",
     "itemName": "데코라인 학생가구 인기상품",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2000000429458.png",
     "priceOriginal": "",
     "priceFinal": "",
+    "favoriteCount": "33",
+    "reviewCount": "",
     "badges": [
       {
         "color": "red",
         "text": "최대 30% 할인"
       }
     ],
-    "favoriteCount": "33",
-    "reviewCount": ""
+    "categories": [
+      5
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2000001422816.png",
     "itemName": "삼성 노트북",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2000001422816.png",
     "priceOriginal": "959,000",
     "priceFinal": "849,000원",
+    "favoriteCount": "31",
+    "reviewCount": "6",
     "badges": [
       {
         "color": "red",
         "text": "11만원 할인"
       }
     ],
-    "favoriteCount": "31",
-    "reviewCount": "6"
+    "categories": [
+      3
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2000001420751.png",
     "itemName": "LG gram 16",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2000001420751.png",
     "priceOriginal": "",
     "priceFinal": "1,999,000원",
+    "favoriteCount": "13",
+    "reviewCount": "2",
     "badges": [
       {
         "color": "blue",
@@ -304,139 +374,185 @@
         "text": "노트북과 +view 동시 구매 시 10만원 추가 할인"
       }
     ],
-    "favoriteCount": "13",
-    "reviewCount": "2"
+    "categories": [
+      3
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2000001387528.png",
     "itemName": "LG gram +view",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2000001387528.png",
     "priceOriginal": "",
     "priceFinal": "399,000원",
+    "favoriteCount": "25",
+    "reviewCount": "5",
     "badges": [
       {
         "color": "blue",
         "text": "2만원 상품권 증정"
       }
     ],
-    "favoriteCount": "25",
-    "reviewCount": "5"
+    "categories": [
+      6,
+      5
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/4549292172478.png",
     "itemName": "캐논 복합기",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/4549292172478.png",
     "priceOriginal": "",
     "priceFinal": "48,900원",
+    "favoriteCount": "67",
+    "reviewCount": "46",
     "badges": [
       {
         "color": "blue",
         "text": "모바일 신세계상품권 2만원 추가증정"
       }
     ],
-    "favoriteCount": "67",
-    "reviewCount": "46"
+    "categories": [
+      7,
+      6
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/0097855123503.png",
     "itemName": "로지텍 무선 콤보",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/0097855123503.png",
     "priceOriginal": "",
     "priceFinal": "24,900원",
-    "badges": [],
     "favoriteCount": "39",
-    "reviewCount": "9"
+    "reviewCount": "9",
+    "badges": [],
+    "categories": [
+      7,
+      6
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/6935364083717.png",
     "itemName": "TP-link 유무선 공유기 Archer",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/6935364083717.png",
     "priceOriginal": "",
     "priceFinal": "28,900원",
-    "badges": [],
     "favoriteCount": "25",
-    "reviewCount": "6"
+    "reviewCount": "6",
+    "badges": [],
+    "categories": [
+      5,
+      6,
+      1
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8804720355516.png",
     "itemName": "아동 실내화 전품목",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8804720355516.png",
     "priceOriginal": "",
     "priceFinal": "",
+    "favoriteCount": "67",
+    "reviewCount": "",
     "badges": [
       {
         "color": "red",
         "text": "2족 구매 시 30% 할인"
       }
     ],
-    "favoriteCount": "67",
-    "reviewCount": ""
+    "categories": [
+      4
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8809509099780.png",
     "itemName": "캐릭터 보조가방 / 아동 캐릭터 가방, 캐주얼 백팩",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8809509099780.png",
     "priceOriginal": "",
     "priceFinal": "7,000 / 15,000 ~ 89,000원",
+    "favoriteCount": "21",
+    "reviewCount": "1",
     "badges": [
       {
         "color": "red",
         "text": "2개 구매 시 30% 할인"
       }
     ],
-    "favoriteCount": "21",
-    "reviewCount": "1"
+    "categories": [
+      1,
+      6,
+      4
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2220025451641.png",
     "itemName": "탑텐키즈 가을 인기아이템",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2220025451641.png",
     "priceOriginal": "",
     "priceFinal": "",
+    "favoriteCount": "66",
+    "reviewCount": "",
     "badges": [
       {
         "color": "blue",
         "text": "1+1"
       }
     ],
-    "favoriteCount": "66",
-    "reviewCount": ""
+    "categories": [
+      7,
+      3,
+      4
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8806078882430.png",
     "itemName": "JAJU 키즈 피치기모 체크10부 파자마 상하세트",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8806078882430.png",
     "priceOriginal": "",
     "priceFinal": "25,930원",
-    "badges": [],
     "favoriteCount": "37",
-    "reviewCount": ""
+    "reviewCount": "",
+    "badges": [],
+    "categories": [
+      7,
+      2
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2220030114234.png",
     "itemName": "데이즈키즈 가을 디즈니 캐릭터/푸마 맨투맨, 팬츠",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2220030114234.png",
     "priceOriginal": "25,900/29,900",
     "priceFinal": "18,130/20,930원",
+    "favoriteCount": "26",
+    "reviewCount": "",
     "badges": [
       {
         "color": "red",
         "text": " 30%할인"
       }
     ],
-    "favoriteCount": "26",
-    "reviewCount": ""
+    "categories": [
+      6,
+      5,
+      7
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2000000564142.png",
     "itemName": "스포츠 용품",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2000000564142.png",
     "priceOriginal": "",
     "priceFinal": "",
+    "favoriteCount": "48",
+    "reviewCount": "",
     "badges": [
       {
         "color": "red",
         "text": "20% 할인"
       }
     ],
-    "favoriteCount": "48",
-    "reviewCount": ""
+    "categories": [
+      2,
+      7
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8801051110081.png",
     "itemName": "세꼼마 핸드워시 용기/리필",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8801051110081.png",
     "priceOriginal": "",
     "priceFinal": "6,900/4,500원",
+    "favoriteCount": "140",
+    "reviewCount": "315",
     "badges": [
       {
         "color": "red",
@@ -447,14 +563,17 @@
         "text": "1+1"
       }
     ],
-    "favoriteCount": "140",
-    "reviewCount": "315"
+    "categories": [
+      3
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8801051040173.png",
     "itemName": "페리오 키즈 양치세트",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8801051040173.png",
     "priceOriginal": "11,900",
     "priceFinal": "8,900원",
+    "favoriteCount": "62",
+    "reviewCount": "628",
     "badges": [
       {
         "color": "red",
@@ -465,98 +584,128 @@
         "text": " 25%할인"
       }
     ],
-    "favoriteCount": "62",
-    "reviewCount": "628"
+    "categories": [
+      3,
+      2
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2000001264652.png",
     "itemName": "삼성 멀티형 에어컨",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2000001264652.png",
     "priceOriginal": "",
     "priceFinal": "",
-    "badges": [
-      {
-        "color": "blue",
-        "text": "진열상품 한정특가"
-      }
-    ],
     "favoriteCount": "15",
-    "reviewCount": "5"
-  },
-  {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2700000444979.png",
-    "itemName": "LG 멀티형 에어컨",
-    "priceOriginal": "",
-    "priceFinal": "",
+    "reviewCount": "5",
     "badges": [
       {
         "color": "blue",
         "text": "진열상품 한정특가"
       }
     ],
-    "favoriteCount": "20",
-    "reviewCount": ""
+    "categories": [
+      5,
+      1
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2000000360010.png",
-    "itemName": "신일/르젠/블랙앤데커 선풍기/써큘레이터",
+    "itemName": "LG 멀티형 에어컨",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2700000444979.png",
     "priceOriginal": "",
     "priceFinal": "",
+    "favoriteCount": "20",
+    "reviewCount": "",
+    "badges": [
+      {
+        "color": "blue",
+        "text": "진열상품 한정특가"
+      }
+    ],
+    "categories": [
+      1,
+      3,
+      7
+    ]
+  },
+  {
+    "itemName": "신일/르젠/블랙앤데커 선풍기/써큘레이터",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2000000360010.png",
+    "priceOriginal": "",
+    "priceFinal": "",
+    "favoriteCount": "70",
+    "reviewCount": "",
     "badges": [
       {
         "color": "red",
         "text": "최대 20% 할인"
       }
     ],
-    "favoriteCount": "70",
-    "reviewCount": ""
+    "categories": [
+      4,
+      1,
+      7
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2220029868940.png",
     "itemName": "데이즈 남/여/아동 여름 티셔츠/반바지 데이즈/브랜드 쿨 이너웨어",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2220029868940.png",
     "priceOriginal": "",
     "priceFinal": "5,900 ~ 19,900원",
+    "favoriteCount": "54",
+    "reviewCount": "",
     "badges": [
       {
         "color": "blue",
         "text": "균일가"
       }
     ],
-    "favoriteCount": "54",
-    "reviewCount": ""
+    "categories": [
+      3,
+      6,
+      2
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8806078784192.png",
     "itemName": "JAJU 노라인 언더웨어",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8806078784192.png",
     "priceOriginal": "",
     "priceFinal": "7,900 / 9,900 / 19,900원",
+    "favoriteCount": "181",
+    "reviewCount": "",
     "badges": [
       {
         "color": "blue",
         "text": "균일가"
       }
     ],
-    "favoriteCount": "181",
-    "reviewCount": ""
+    "categories": [
+      4,
+      3
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8809532360574.png",
     "itemName": "여름침구 전품목",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8809532360574.png",
     "priceOriginal": "",
     "priceFinal": "",
+    "favoriteCount": "314",
+    "reviewCount": "10",
     "badges": [
       {
         "color": "red",
         "text": "최대 50% 할인"
       }
     ],
-    "favoriteCount": "314",
-    "reviewCount": "10"
+    "categories": [
+      4
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8809709265657.png",
     "itemName": "썸머 기저귀",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8809709265657.png",
     "priceOriginal": "",
     "priceFinal": "",
+    "favoriteCount": "71",
+    "reviewCount": "31",
     "badges": [
       {
         "color": "blue",
@@ -567,116 +716,150 @@
         "text": "2개 구매 시 50% 할인"
       }
     ],
-    "favoriteCount": "71",
-    "reviewCount": "31"
+    "categories": [
+      1
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8809694621322.png",
     "itemName": "썬케어 전품목",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8809694621322.png",
     "priceOriginal": "",
     "priceFinal": "",
+    "favoriteCount": "127",
+    "reviewCount": "4",
     "badges": [
       {
         "color": "red",
         "text": "최대 50% 할인"
       }
     ],
-    "favoriteCount": "127",
-    "reviewCount": "4"
+    "categories": [
+      3
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2220029831005.png",
     "itemName": "캠핑/아웃도어 퍼니처",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/2220029831005.png",
     "priceOriginal": "",
     "priceFinal": "",
+    "favoriteCount": "185",
+    "reviewCount": "78",
     "badges": [
       {
         "color": "red",
         "text": "행사카드 구매 시 최대 50% 할인"
       }
     ],
-    "favoriteCount": "185",
-    "reviewCount": "78"
+    "categories": [
+      2,
+      6,
+      4
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8801166033350.png",
     "itemName": "스카트 청소용품 전품목",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8801166033350.png",
     "priceOriginal": "",
     "priceFinal": "",
+    "favoriteCount": "183",
+    "reviewCount": "448",
     "badges": [
       {
         "color": "red",
         "text": "신세계포인트 적립 시 30% 할인"
       }
     ],
-    "favoriteCount": "183",
-    "reviewCount": "448"
+    "categories": [
+      6
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8806006508548.png",
     "itemName": "유한락스 곰팡이제거/주방청소/욕실청소",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8806006508548.png",
     "priceOriginal": "",
     "priceFinal": "7,610원",
-    "badges": [],
     "favoriteCount": "200",
-    "reviewCount": "868"
+    "reviewCount": "868",
+    "badges": [],
+    "categories": [
+      6,
+      5,
+      2
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8805944311395.png",
     "itemName": "SK매직 2구 가스렌지",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8805944311395.png",
     "priceOriginal": "",
     "priceFinal": "219,000원",
+    "favoriteCount": "10",
+    "reviewCount": "2",
     "badges": [
       {
         "color": "blue",
         "text": "상품권 1만원 증정"
       }
     ],
-    "favoriteCount": "10",
-    "reviewCount": "2"
+    "categories": [
+      3,
+      2
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8801037046021.png",
     "itemName": "동서 아이스커피 전품목",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8801037046021.png",
     "priceOriginal": "",
     "priceFinal": "",
+    "favoriteCount": "565",
+    "reviewCount": "194",
     "badges": [
       {
         "color": "blue",
         "text": "상품권 증정"
       }
     ],
-    "favoriteCount": "565",
-    "reviewCount": "194"
+    "categories": [
+      1
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8801068114379.png",
     "itemName": "삼립 탱글탱글제리뽀 10입",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8801068114379.png",
     "priceOriginal": "5,180",
     "priceFinal": "2,850원",
-    "badges": [],
     "favoriteCount": "399",
-    "reviewCount": "1,110"
+    "reviewCount": "1,110",
+    "badges": [],
+    "categories": [
+      5,
+      7,
+      4
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8801077271209.png",
     "itemName": "진주햄 천하장사 오리지날",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8801077271209.png",
     "priceOriginal": "13,980",
     "priceFinal": "6,990원",
+    "favoriteCount": "511",
+    "reviewCount": "2,832",
     "badges": [
       {
         "color": "red",
         "text": "50% 할인"
       }
     ],
-    "favoriteCount": "511",
-    "reviewCount": "2,832"
+    "categories": [
+      6
+    ]
   },
   {
-    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8594404115115.png",
     "itemName": "필스너 우르켈",
+    "itemImage": "https://stimg.emart.com/upload/onlineleaflet/220818/8594404115115.png",
     "priceOriginal": "",
     "priceFinal": "3,000원",
+    "favoriteCount": "814",
+    "reviewCount": "",
     "badges": [
       {
         "color": "red",
@@ -687,7 +870,8 @@
         "text": "6개 구매 시 8,880원"
       }
     ],
-    "favoriteCount": "814",
-    "reviewCount": ""
+    "categories": [
+      2
+    ]
   }
 ]
