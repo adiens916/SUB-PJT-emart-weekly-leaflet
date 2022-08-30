@@ -1,35 +1,48 @@
 /**
- * 출처: https://simian114.gitbook.io/blog/undefined/react/intersectionobserverapi
+ * 출처: https://velog.io/@yunsungyang-omc/React-무한-스크롤-기능-구현하기-used-by-Intersection-Observer-2
  */
 
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
-export const useIntersectionObserver = (callback: () => void) => {
-  const [observationTarget, setObservationTarget] =
-    useState<HTMLDivElement | null>(null);
-  const observer = useRef(
-    new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) return;
-        callback();
-      },
-      { threshold: 1 },
-    ),
+const defaultOption: IntersectionObserverInit = {
+  root: null,
+  threshold: 0.5,
+  rootMargin: '0px',
+};
+
+const useIntersect = (
+  onIntersect: onIntersectType,
+  option: IntersectionObserverInit,
+) => {
+  const [ref, setRef] = useState<HTMLDivElement | null>(null);
+
+  const checkIntersect = useCallback(
+    ([entry]: IntersectionObserverEntry[], observer: IntersectionObserver) => {
+      if (entry.isIntersecting) {
+        onIntersect(entry, observer);
+      }
+    },
+    [],
   );
 
   useEffect(() => {
-    const currentTarget = observationTarget;
-    const currentObserver = observer.current;
-    if (currentTarget) {
-      currentObserver.observe(currentTarget);
+    let observer: IntersectionObserver | undefined;
+    if (ref) {
+      observer = new IntersectionObserver(checkIntersect, {
+        ...defaultOption,
+        ...option,
+      });
+      observer.observe(ref);
     }
 
-    return () => {
-      if (currentTarget) {
-        currentObserver.unobserve(currentTarget);
-      }
-    };
-  }, [observationTarget]);
+    return () => observer && observer.disconnect();
+  }, [ref, checkIntersect]);
 
-  return setObservationTarget;
+  return { ref, setRef };
 };
+
+export default useIntersect;
+
+interface onIntersectType {
+  (entry: IntersectionObserverEntry, observer: IntersectionObserver): void;
+}

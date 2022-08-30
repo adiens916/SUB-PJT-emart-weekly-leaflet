@@ -1,17 +1,14 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { Container } from '@mui/material';
 
-// import NavigationBar from './components/NavigationBar';
-// import Intro from './components/Intro';
+import Intro from './components/Intro';
+import Header from './components/Header';
 import ItemFilter from './components/ItemFilter';
 import ItemList from './components/ItemList';
 
-import { useIntersectionObserver } from './hook/useIntersectionObserver';
+import useIntersect from './hook/useIntersectionObserver';
 import { getItemListByPage } from './api';
 import { ItemType } from './types';
-import './App.css';
-import Intro from './components/Intro';
-import Header from './components/Header';
-import { Container } from '@mui/material';
 
 function App() {
   const [categoryId, setCategoryId] = useState(0);
@@ -20,10 +17,9 @@ function App() {
   const categoryIdRef = useRef<number>(0);
   const pageCount = useRef<number>(1);
 
-  const loadItemList = useCallback(async () => {
+  const { setRef } = useIntersect(async (entry, observer) => {
     setIsLoading(true);
-
-    console.log('in func', categoryIdRef);
+    observer.unobserve(entry.target);
 
     const newItemList = await getItemListByPage(
       categoryIdRef.current,
@@ -34,15 +30,13 @@ function App() {
     pageCount.current += 1;
 
     setIsLoading(false);
-  }, [categoryIdRef.current]);
-
-  const setObservationTarget = useIntersectionObserver(loadItemList);
+    observer.observe(entry.target);
+  }, {});
 
   useEffect(() => {
     console.log(categoryIdRef);
     pageCount.current = 1;
     setItemList([]);
-    loadItemList();
   }, [categoryIdRef.current]);
 
   return (
@@ -57,7 +51,7 @@ function App() {
       />
       <ItemList itemList={itemList} />
       {isLoading && <div>Loading...</div>}
-      {!isLoading && <div ref={setObservationTarget}></div>}
+      {!isLoading && <div ref={setRef}></div>}
     </Container>
   );
 }
