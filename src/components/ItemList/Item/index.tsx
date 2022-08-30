@@ -6,7 +6,13 @@ export default function Item({ item }: { item: ItemType }) {
     <article>
       {item && (
         <Grid container marginBottom={5}>
-          <Grid item xs={5} alignContent="center">
+          <Grid
+            item
+            xs={5}
+            display="flex"
+            alignContent="center"
+            justifyContent="center"
+          >
             <img
               src={item.itemImage}
               alt={item.itemName}
@@ -20,15 +26,36 @@ export default function Item({ item }: { item: ItemType }) {
 
           <Grid item xs={7}>
             {/* 가격 */}
-            <Stack direction="row" alignItems="center" spacing={1}>
-              <del style={{ color: 'grey' }}>{item.priceOriginal}</del>
-              <p style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>
+            <Stack
+              direction="row"
+              alignItems="center"
+              spacing={1}
+              flexWrap="wrap"
+            >
+              <del style={{ color: 'grey', marginRight: 5 }}>
+                {item.priceOriginal}
+              </del>
+              <p
+                style={{
+                  fontWeight: 'bold',
+                  fontSize: '1.2rem',
+                  marginLeft: 0,
+                }}
+              >
                 {item.priceFinal}
               </p>
             </Stack>
 
             {/* 상품 이름 */}
-            <p style={{ fontSize: '1.25rem' }}>{item.itemName}</p>
+            <p
+              style={{
+                fontSize: '1rem',
+                wordBreak: 'keep-all',
+                margin: '5px 0px 5px 0px',
+              }}
+            >
+              {item.itemName}
+            </p>
 
             {/* 배지 */}
             <div>
@@ -36,7 +63,7 @@ export default function Item({ item }: { item: ItemType }) {
                 <Chip
                   label={badge.text}
                   variant="outlined"
-                  style={{ color: badge.color }}
+                  style={{ color: badge.color, borderRadius: 5, margin: 3 }}
                   key={index}
                 />
               ))}
@@ -47,12 +74,20 @@ export default function Item({ item }: { item: ItemType }) {
               direction="row"
               alignItems="center"
               spacing={1}
-              marginTop={3}
+              marginTop={1}
             >
-              <img src="./icons/notLiked.png" />
-              <p>{item.favoriteCount}</p>
-              <img src="./icons/review.png" />
-              <p>{item.reviewCount}</p>
+              {item.favoriteCount && (
+                <>
+                  <img src="./icons/notLiked.png" width="20rem" />
+                  <p style={{ marginRight: '2rem' }}>{item.favoriteCount}</p>
+                </>
+              )}
+              {item.reviewCount && (
+                <>
+                  <img src="./icons/review.png" width="20rem" />
+                  <p>{item.reviewCount}</p>
+                </>
+              )}
             </Stack>
           </Grid>
         </Grid>
