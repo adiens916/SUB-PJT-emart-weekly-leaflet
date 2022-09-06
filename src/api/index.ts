@@ -1,6 +1,26 @@
+import { useEffect } from 'react';
 import { ItemType } from '../types';
 
-const host = './resources/sample.json';
+export function testFetch(page: number, category: number) {
+  useEffect(() => {
+    fetchItems(page, category).then((data) => {
+      console.log(data);
+    });
+
+    return () => {
+      console.log('page changed');
+    };
+  }, [page, category]);
+}
+
+const host = 'http://localhost:3000';
+const resource = 'items';
+
+export async function fetchItems(page: number, category: number) {
+  let query = `_page=${page}`;
+  if (category) query += `&categories_like=${category}`;
+  return await request(`${host}/${resource}?${query}`);
+}
 
 export class ItemListLoader {
   private categoryId;

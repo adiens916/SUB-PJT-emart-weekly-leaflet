@@ -7,7 +7,7 @@ import ItemFilter from './components/ItemFilter';
 import ItemList from './components/ItemList';
 
 import useIntersect from './hook/useIntersectionObserver';
-import { ItemListLoader } from './api';
+import { ItemListLoader, testFetch } from './api';
 import { ItemType } from './types';
 
 function App() {
@@ -33,6 +33,8 @@ function App() {
       setIsFullLoaded(true);
     }
   };
+
+  testFetch(0, 2);
 
   useEffect(() => {
     (async () => {
