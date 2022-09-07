@@ -19,8 +19,7 @@ export default function ItemFilter(props: ItemFilterType) {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    props.setCategoryId(newValue);
-    props.categoryRef.current = newValue;
+    props.changeCategory(newValue);
   };
 
   return (
@@ -56,7 +55,6 @@ export default function ItemFilter(props: ItemFilterType) {
 }
 
 interface ItemFilterType {
-  setCategoryId: React.Dispatch<React.SetStateAction<number>>;
   categoryId: number;
-  categoryRef: React.MutableRefObject<number>;
+  changeCategory: (newCategoryId: number) => void;
 }
