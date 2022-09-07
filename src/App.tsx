@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Container } from '@mui/material';
 
 import Intro from './components/Intro';
@@ -19,33 +19,23 @@ function App() {
   };
 
   const observer = useRef<IntersectionObserver>();
-  const onRefAttachObserver = useCallback(
-    (node: HTMLDivElement) => {
-      // 최초 마운트 시에는 로딩 상태이므로 관측 대상 설정하지 않음
-      if (loading) return;
-      if (observer.current) observer.current.disconnect();
+  const onRefAttachObserver = (node: HTMLDivElement) => {
+    // 최초 마운트 시에는 로딩 상태이므로 관측 대상 설정하지 않음
+    if (loading) return;
+    // 이전에 관찰하던 대상들 관찰 해제
+    if (observer.current) observer.current.disconnect();
+    // 관찰자를 새로 만들어줘야 함 (새로 안 만들면 이전 행동 반복함)
+    observer.current = new IntersectionObserver(onIntersect);
+    // 새로 렌더링된 DOM을 관측 대상으로 설정
+    if (node) observer.current.observe(node);
+  };
 
-      observer.current = new IntersectionObserver(onIntersect, {
-        threshold: 0,
-      });
-      // 새로 렌더링된 DOM을 관측 대상으로 설정
-      if (node) observer.current.observe(node);
-    },
-    [loading],
-  );
-
-  const onIntersect = useCallback(
-    ([entry]: IntersectionObserverEntry[]) => {
-      // 이전 API 요청 결과가 더 있었을 때만, 페이지 개수 변경
-      if (entry.isIntersecting) {
-        console.log('intersecting');
-        if (hasMore) setPage((page) => page + 1);
-      } else {
-        console.log('intersecting out');
-      }
-    },
-    [hasMore],
-  );
+  const onIntersect = ([entry]: IntersectionObserverEntry[]) => {
+    // 이전 API 요청 결과가 더 있었을 때만, 페이지 개수 변경
+    if (entry.isIntersecting && hasMore) {
+      setPage((page) => page + 1);
+    }
+  };
 
   useEffect(() => {
     console.log('items: ', items);
