@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Container } from '@mui/material';
 
 import Intro from './components/Intro';
@@ -9,11 +9,15 @@ import ItemList from './components/ItemList';
 import useItemLoader from './hook/useItemLoader';
 
 function App() {
-  const [categoryId, setCategoryId] = useState(0);
-  const categoryIdRef = useRef<number>(0);
-
   const [page, setPage] = useState(1);
-  const { items, loading, hasMore } = useItemLoader(page, 0);
+  const [categoryId, setCategoryId] = useState(0);
+  const { items, loading, hasMore } = useItemLoader(page, categoryId);
+
+  const changeCategory = (newCategoryId: number) => {
+    setCategoryId(newCategoryId);
+    setPage(1);
+  };
+
   useEffect(() => {
     console.log('items: ', items);
     console.log('loading: ', loading);
@@ -31,11 +35,7 @@ function App() {
       </button>
       <Header />
       <Intro />
-      <ItemFilter
-        setCategoryId={setCategoryId}
-        categoryId={categoryId}
-        categoryRef={categoryIdRef}
-      />
+      <ItemFilter categoryId={categoryId} changeCategory={changeCategory} />
       <ItemList itemList={items} />
       {loading && <div>Loading...</div>}
     </Container>
