@@ -1,6 +1,6 @@
 import { ItemType } from '../types';
 
-const host = 'http://localhost:3000';
+const host = 'https://at-your-service.net/api';
 const resource = 'items';
 
 export async function fetchItems(
