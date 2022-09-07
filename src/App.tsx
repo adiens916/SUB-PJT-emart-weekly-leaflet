@@ -7,7 +7,8 @@ import ItemFilter from './components/ItemFilter';
 import ItemList from './components/ItemList';
 
 import useIntersect from './hook/useIntersectionObserver';
-import { ItemListLoader, testFetch } from './api';
+import useItemLoader from './hook/useItemLoader';
+import { ItemListLoader } from './api';
 import { ItemType } from './types';
 
 function App() {
@@ -34,17 +35,30 @@ function App() {
     }
   };
 
-  testFetch(0, 2);
-
+  const [page, setPage] = useState(1);
+  const { items, loading, hasMore } = useItemLoader(page, 0);
   useEffect(() => {
-    (async () => {
-      itemListLoader.current.setCategory(categoryId);
-      setItemList(await itemListLoader.current.getMore());
-    })();
-  }, [categoryId]);
+    console.log('items: ', items);
+    console.log('loading: ', loading);
+    console.log('hasMore: ', hasMore);
+  }, [items, loading, hasMore]);
+
+  // useEffect(() => {
+  //   (async () => {
+  //     itemListLoader.current.setCategory(categoryId);
+  //     setItemList(await itemListLoader.current.getMore());
+  //   })();
+  // }, [categoryId]);
 
   return (
     <Container>
+      <button
+        onClick={() => {
+          setPage((page) => page + 1);
+        }}
+      >
+        아이템 로딩
+      </button>
       <Header />
       <Intro />
       <ItemFilter
